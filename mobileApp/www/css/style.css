@@ -1,0 +1,138 @@
+/***************************************/
+/******** Camera Customization *********/
+/***************************************/
+.camera-footer {
+	height: 100px;
+	padding: 0px;
+}
+.camera-btn,
+.camera-btn:before{
+	min-height: 100px!important;
+	line-height: 100px!important;
+	font-size: 60px!important;
+	margin: 0px auto!important;
+}
+
+.receipt-rotate-btn,
+.receipt-rotate-btn:before{
+	font-size: 30px!important;
+	margin: auto 0 auto 10px;
+}
+.receipt-insert-btn,
+.receipt-insert-btn:before{
+	font-size: 30px!important;
+	margin: auto 10px auto 0;
+}
+/***************************************/
+/****End of Camera Customization *******/
+/***************************************/
+
+
+/***************************************/
+/****** Receipts Customization *********/
+/***************************************/
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+.item-stable.item {padding: 0;}
+.receipt-toggle {margin-top: 11px;}
+.receipt-item {padding-left: 70px;}
+/***************************************/
+/**** End of Receipts Customization ****/
+/***************************************/
+
+
+.receipt-form label { border-width: 0 0 1px 0; }
+.category-popup .popup { width: 310px; }
+
+.register-form label, .login-form label { border-width: 0 0 1px 0; }
+.register-link {text-decoration: none; color:#000}
+
+.pull-left {float: left;}
+.pull-right {float: right;}
+.center {text-align: center;}
+.left {text-align: left;}
+.right {text-align: right;}
+
+
+.profile-wrapper {
+	position: relative;
+	background-color: #ccc;
+	height: 200px;
+	padding: 30px 0px 20px;
+	display: block;
+}
+
+.profile-wrapper .user-avatar{ 
+	margin: 0 auto;
+	border-radius: 50%;
+	border: 3px solid #fff; 
+
+}
+
+.profile-tabs > .tabs {
+	top:244px!important;
+}
+.profile-tabs ion-content {top:293px;}
+.user-statistics{
+	color: #fff;
+	background: #886AEA;
+	border: think solid black;
+}
+.user-statistics > .col:nth-child(1){
+	border-right: 1px solid #fff;
+}
+
+.user-charts-wrapper { padding: 20px 0; }
+
+/***************************************/
+/**** Validation Customization *********/
+/***************************************/
+.has-errors { border-bottom: 1px solid #cc2511!important; }
+.no-errors { border-bottom: 1px solid rgb(221, 221, 221); }
+.no-errors input{ 
+	-webkit-box-shadow: 0 0 0px 1000px white inset!important; 
+	background-color: transparent!important;
+}
+
+
+.share-buttons button{ padding: 0px}
+
+.cropArea {
+	background: #E4E4E4;
+	overflow: hidden;
+	top: 43px;
+  	bottom: 100px;
+  	position: absolute;
+  	right: 0px;
+  	left: 0px;
+}
+
+.login-wrapper .scroll-content {
+  display: table !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.login-wrapper .scroll {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.rotate-photo-btn{
+	position: absolute;
+	bottom: 30px!important;
+	left: 20px!important;/*
+	padding-left: 20px!important;
+	padding-top: 40px!important;*/
+}

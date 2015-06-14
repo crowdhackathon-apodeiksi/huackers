@@ -1,0 +1,80 @@
+<ion-view view-title="Το προφίλ μου">
+  <ion-content>
+    <div class="profile-wrapper center">
+    	<div class="row">
+    		<div class="col">
+				<a ng-click="change_avatar()">
+					<img class="user-avatar" ng-src="{{user.photo}}"  />
+				</a>
+    		</div>
+    	</div>
+
+    	<div class="row">
+    		<div class="col">
+    			<i class="icon ion-ios-star"></i>
+		    	<i class="icon ion-ios-star"></i>
+		    	<i class="icon ion-ios-star"></i>
+		    	<i class="icon ion-ios-star"></i><br/>{{user.email}}
+    		</div>
+    	</div>
+    </div>
+    </ion-content>
+    <ion-tabs class="profile-tabs tabs-striped tabs-top tabs-stable">
+		<ion-tab title="Συνολικά" on-select=showAllTabData()>
+			<ion-nav-view name="all-tab">
+				<ion-content>
+			    	<div class="user-charts-wrapper"> 
+			    		<canvas id="pie-chart" receipts-number="{{total_counter}}" receipts-value="22.2€" chart-text tc-chartjs-doughnut chart-options="options" chart-data="data"></canvas>
+			    	</div>
+					<ul class="list">
+						<ion-item  ng-repeat="category in categories"   >
+								<i class="icon ion-android-checkbox-blank positive"></i>
+									{{category.type_name}}
+								<span class="pull-right">{{category.totalCostPerCategory}}</span>
+						</ion-item>
+					</ul>
+				</ion-content>
+			</ion-nav-view>
+		</ion-tab>
+		<ion-tab title="Αυτό τον μήνα" on-select=showMonthTabData()>
+			<ion-nav-view title="month-tab">
+				<ion-content>
+					<div class="user-charts-wrapper">
+						<canvas id="pie-chart" receipts-number="{{total_counter_monthly}}" receipts-value="22.2€" chart-text tc-chartjs-doughnut chart-options="options" chart-data="data"></canvas>
+					</div>
+					<ul class="list">
+						<ion-item  ng-repeat="category in categories"   >
+							<i class="icon ion-android-checkbox-blank positive"></i>
+							{{category.type_name}}
+							<span class="pull-right">{{category.totalCostPerCategory}}</span>
+						</ion-item>
+					</ul>
+				</ion-content>
+			</ion-nav-view>
+		</ion-tab>
+	</ion-tabs>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <!-- <ion-content>
+
+  </ion-content> -->
+</ion-view>

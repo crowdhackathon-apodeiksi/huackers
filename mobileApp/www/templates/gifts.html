@@ -1,0 +1,32 @@
+<ion-view cache-view="false" view-title="Οι επιβραβεύσεις μου">
+	<ion-tabs class="tabs-striped tabs-top tabs-positive">
+		<ion-tab title="Καταστημάτων" on-select=showAllTabData()>
+			<ion-nav-view name="tax-tab">
+				<ion-content>
+					<ion-list>
+			        	<div ng-repeat="gift in gifts">
+			          		<ion-item class="item-stable">
+			              		<a class="item item-avatar" href="#">
+						      		<img src="./img/venkman.jpg">
+						      		<div class="pull-left">
+						      			<h2><b>{{gift.onomasia}}</b></h2>
+						      			<p>{{gift.offer_descr}}<p>
+						      		</div>
+						      		<div class="pull-right share-buttons">
+						      		<button class="button button-clear button-calm icon ion-social-twitter" ng-disabled="!twitter" ng-click="shareViaTwitter( gift.offer_descr, gift.onomasia)"></button>
+						      		<button class="button button-clear button-positive icon ion-social-facebook" ng-disabled="!facebook"></button>
+						    		</div>
+						    	</a>
+			         		</ion-item>
+			        	</div>
+      				</ion-list>
+				</ion-content>
+			</ion-nav-view>
+		</ion-tab>
+		<ion-tab title="Φορολογικές" on-select=showMonthTabData()>
+			<ion-nav-view title="shop-tab">
+				
+			</ion-nav-view>
+		</ion-tab>
+	</ion-tabs>
+</ion-view>

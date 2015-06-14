@@ -1,0 +1,51 @@
+<ion-view view-title="Ρυθμίσεις">
+  <ion-content>
+    <ul class="list">
+    <div class="item item-divider">Κοινωνικά Δίκτυα</div>
+	  	<li class="item item-toggle">
+		    Facebook
+		    <label class="toggle toggle-balanced">
+		       	<input type="checkbox" ng-checked="facebook" ng-click="toggleFacebook()">
+		       	<div class="track">
+		        	<div class="handle"></div>
+		      	</div>
+		    </label>
+		</li>
+		<li class="item item-toggle">
+		    Twitter
+		    <label class="toggle toggle-balanced">
+		       	<input type="checkbox" ng-checked="twitter" ng-click="toggleTwitter()">
+		       	<div class="track">
+		        	<div class="handle"></div>
+		      	</div>
+		    </label>
+		</li>
+	
+    <div class="item item-divider">Γ.Γ.Π.Σ</div>
+	  	<li class="item item-toggle">
+		    Σύνδεση με Γ.Γ.Π.Σ
+		    <label class="toggle toggle-balanced">
+		       	<input type="checkbox" ng-model="ggps">
+		       	<div class="track">
+		        	<div class="handle"></div>
+		      	</div>
+		    </label>
+		</li>
+		<li class="item item-toggle">
+		    Υπενθύμιση συγχρονισμού αποδείξεων
+		    <label class="toggle toggle-balanced" >
+		       	<input type="checkbox" ng-disabled="!ggps">
+		       	<div class="track">
+		        	<div class="handle"></div>
+		      	</div>
+		    </label>
+		</li>
+	</ul>
+	<button class="button button-block button-positive" ng-disabled="!ggps">
+  		Συγχρονισμός αποδείξεων
+	</button>
+	<button class="button button-block button-positive">
+  		Κατέβασμα όλων των αποδείξεων μου
+	</button>
+  </ion-content>
+</ion-view>

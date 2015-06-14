@@ -1,0 +1,24 @@
+<ion-view view-title="Login" name="login-view" class="login-wrapper">
+  	<ion-content class="padding">
+		<div class="row row-center">	
+			<div class="col col-80 col-offset-10">
+				<form  name="loginForm" ng-submit="login(loginForm)" novalidate>
+					<div class="list login-form">
+					  	<label class="item item-input item-floating-label" ng-class="{'has-errors' : loginForm.email.$invalid && !loginForm.email.$pristine, 'no-errors' : loginForm.email.$valid}">
+				    		<span class="input-label">Ηλεκτρονικό ταχυδρομείο</span>
+					    	<input type="email" name="email" ng-model="credentials.email" placeholder="Ηλεκτρονικό ταχυδρομείο" required>
+					  	</label>
+					  	<label class="item item-input item-floating-label" ng-class="{'has-errors' : loginForm.password.$invalid && !loginForm.password.$pristine, 'no-errors' : loginForm.password.$valid}">
+					   	 	<span class="input-label">Συνθηματικό</span>
+					    	<input type="password" name="password" ng-model="credentials.password" placeholder="Συνθηματικό" required>
+					  	</label>
+					</div>
+	  				<button type="submit" class="button button-block button-positive">Σύνδεση</button>
+				</div>
+			</form>
+		</div>
+		<div class="row">
+		 	<div class="col center">Δεν έχετε λογαριασμό; <a class="register-link" href="#/identify"><strong>Εγγραφείτε!</strong></a></div>
+		</div>
+  	</ion-content>
+</ion-view>

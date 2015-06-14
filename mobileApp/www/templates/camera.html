@@ -1,0 +1,38 @@
+<ion-view view-title="Ανέβασε την!">
+	<ion-nav-buttons side="right">
+		<!-- <button class="button button-clear button-positive icon ion-calendar" ng-click="showCalendarPopup()"></button> -->
+		<button class="button button-clear button-clear icon ion-ios-barcode-outline" ng-click="scanBarcode()"></button>
+	</ion-nav-buttons>
+	<ion-content padding="true">  
+    </ion-content>
+
+	<div class="cropArea">
+		<img-crop image="myImage" result-image="myCroppedImage"
+				  result-image-quality="1" result-image-size="2000"
+				  area-min-size = "10"
+				  area-type="rectangle"
+
+
+				  result-width="myCroppedImageW"
+				  result-height="myCroppedImageH"
+
+				  result-x="myCroppedImageX"
+				  result-y="myCroppedImageY"
+
+				  original-width="myOriginalW"
+				  original-height="myOriginalH"
+
+				  original-crop-x="myOriginalX"
+				  original-crop-y="myOriginalY"
+
+				  original-crop-width="myCroppedOriginalW"
+				  original-crop-height="myCroppedOriginalH"></img-crop>
+	</div>
+
+
+    <div class="bar bar-footer bar-stable camera-footer">
+    <button class="button button-clear button-positive pull-left icon ion-android-refresh rotate-photo-btn" ng-click="rotate(myImage)"></button>
+		<button class="button button-clear button-positive icon ion-aperture camera-btn" ng-click="getPhoto()"></button>
+		<button class="button button-clear button-positive icon ion-android-done pull-right receipt-insert-btn" ng-click="sendCropedPhoto(myCroppedImage)"></button>
+	</div>
+</ion-view>

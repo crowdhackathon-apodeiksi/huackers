@@ -1,0 +1,28 @@
+<ion-view view-title="Προσφορές">
+	<ion-nav-buttons side="right">
+		<a href="#/app_business/offers_add" class="button button-clear button-clear icon ion-android-add"></a>
+	</ion-nav-buttons>
+	<ion-content>  
+		<ion-list>
+        	<div ng-repeat="offer in offers">
+          		<ion-item class="item-stable">
+              		<div class="item item-avatar"	>
+			      		<img src="./img/venkman.jpg">
+			      		<div class="pull-left">
+			      			<h2><b>{{offer.name}}</b></h2>
+			      			<p>Αριθμός αποδείξεων: {{offer.tn}}<p>
+			      		</div>
+			      		<div class="pull-right receipt-toggle">
+			      			<label class="toggle toggle-balanced">
+						       <input type="checkbox" ng-checked="offer.enabled">
+						       <div class="track">
+						         <div class="handle"></div>
+						       </div>
+						     </label>
+			    		</div>
+			    	</div>
+         		</ion-item>
+        	</div>
+		</ion-list>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="Προφίλ">
+  <ion-content>
+    <div class="profile-wrapper center">
+    	<div class="row">
+    		<div class="col"><img class="user-avatar" src="./img/venkman.jpg">
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col">
+    			<br/>{{user.afm}}
+    		</div>
+    	</div>
+    </div>
+    </ion-content>
+    <ion-tabs class="profile-tabs tabs-striped tabs-top tabs-stable">
+		<ion-tab title="Συνολικά" on-select=showAllTabData()>
+			<ion-nav-view name="all-tab">
+				<ion-content>
+			    	<div class="user-charts-wrapper"> 
+			    		<canvas id="pie-chart" tc-chartjs-radar chart-options="options" chart-data="data"></canvas>
+			    	</div>
+				</ion-content>
+			</ion-nav-view>
+		</ion-tab>
+	</ion-tabs>
+</ion-view>

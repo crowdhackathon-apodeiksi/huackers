@@ -1,0 +1,22 @@
+<ion-view view-title="Προσθήκη νέας προσφοράς">
+	<ion-content class="padding">
+		<form  name="confirmReceiptForm" ng-submit="addReceipt(confirmReceiptForm)" novalidate>
+		    <div class="list receipt-form">
+				<label class="item item-input item-stacked-label">
+				    <span class="input-label">Περιγραφή</span>
+				    <input type="text" name="address" placeholder="π.χ. 20% έκτπωση για την επόμενη αγορά σας" required>
+				</label>
+				<label class="item item-input item-stacked-label">
+				    <span class="input-label">Αριθμός αποδείξεων</span>
+				    <input type="text" name="sname" ng-model="receipt.name" placeholder="π.χ. 15" required>
+				</label>
+				<label class="item item-input item-stacked-label">
+				    <span class="input-label">Ημερομηνία έναρξης προσφοράς</span>
+				    <input type="text" name="address" value="{{currentDate | date:'dd - MM - yyyy'}}" placeholder="π.χ. 14-6-2015" required>
+				</label>
+			</div>
+		    <button class="button button-block button-positive">Προσθήκη προσφοράς</button>
+		</form>
+	</ion-content>
+</ion-view>
+

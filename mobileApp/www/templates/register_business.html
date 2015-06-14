@@ -1,0 +1,33 @@
+<ion-view view-title="Register" name="register-view"  class="login-wrapper">
+  	<ion-content class="padding">
+		<div class="row row-center">	
+			<div class="col col-80 col-offset-10">
+				<form  name="registerForm" ng-submit="register(registerForm)" novalidate>
+					<div class="list register-form">
+						<label class="item item-input item-floating-label" ng-class="{'has-errors' : registerForm.afm.$invalid && !registerForm.afm.$pristine, 'no-errors' : registerForm.afm.$valid}">
+				    		<span class="input-label">Α.Φ.Μ.</span>
+					    	<input type="text" name="afm" ng-model="user.afm" placeholder="Α.Φ.Μ" required ng-minlength="9" ng-maxlength="9" ng-pattern="/^(0|[1-9][0-9]*)$/">
+					  	</label>
+					  	<label class="item item-input item-floating-label" ng-class="{'has-errors' : registerForm.email.$invalid && !registerForm.email.$pristine, 'no-errors' : registerForm.email.$valid}">
+				    		<span class="input-label">Ηλεκτρονικό ταχυδρομείο</span>
+					    	<input type="email" name="email" ng-model="user.email" placeholder="Ηλεκτρονικό ταχυδρομείο" required>
+					  	</label>
+					  	<label class="item item-input item-floating-label" ng-class="{'has-errors' : registerForm.password.$invalid && !registerForm.password.$pristine, 'no-errors' : registerForm.password.$valid}">
+					   	 	<span class="input-label">Συνθηματικό</span>
+					    	<input type="password" name="password" ng-model="user.password" placeholder="Συνθηματικό" required>
+					  	</label>
+					  	<label class="item item-input item-floating-label" ng-class="{'has-errors' : registerForm.taxisUsername.$invalid && !registerForm.taxisUsername.$pristine, 'no-errors' : registerForm.taxisUsername.$valid}">
+					   	 	<span class="input-label">Ειδικοί κωδικοί TaxisNet - Ονομα χρήστη</span>
+					    	<input type="password" name="taxisUsername" ng-model="user.taxisUsername" placeholder="Ειδικοί κωδικοί TaxisNet - Ονομα χρήστη" required>
+					  	</label>
+					  	<label class="item item-input item-floating-label" ng-class="{'has-errors' : registerForm.taxisPassword.$invalid && !registerForm.taxisPassword.$pristine, 'no-errors' : registerForm.taxisPassword.$valid}">
+					   	 	<span class="input-label">Ειδικοί κωδικοί TaxisNet - Συνθηματικό</span>
+					    	<input type="password" name="taxisPassword" ng-model="user.taxisPassword" placeholder="Ειδικοί κωδικοί TaxisNet - Συνθηματικό" required>
+					  	</label>
+					</div>
+					<button class="button button-block button-positive">Ολοκλήρωση εγγραφής</button>
+				</form>
+			</div>
+		</div>
+  	</ion-content>
+</ion-view>

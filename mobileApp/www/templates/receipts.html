@@ -1,0 +1,56 @@
+<ion-view view-title="Αποδείξεις">
+	<ion-nav-buttons side="right">
+		<!-- <button class="button button-clear button-positive icon ion-calendar" ng-click="showCalendarPopup()"></button> -->
+        <button class="button button-clear button-clear icon ion-funnel" ng-click="showCategoriesPopup()"></button>
+    </ion-nav-buttons>
+	<ion-tabs class="tabs-striped tabs-top tabs-positive">
+		<ion-tab title="Συνολικά" on-select=showAllTabData()>
+			<ion-nav-view name="all-tab">
+				<ion-content>
+					<ion-list>
+			        	<div ng-repeat="receipt in receipts">
+			          		<ion-item class="item-stable" ng-click="toggleReceipt(receipt)" ng-class="{active: isReceiptShown(receipt)}">
+			              		<a class="item item-avatar" href="#">
+						      		<img src="./img/venkman.jpg">
+						      		<div class="pull-left">
+						      			<h2><b>{{receipt.name}}</b></h2>
+						      			<p> {{receipt.synolo}} € <p>
+						      		</div>
+						      		<div class="pull-right receipt-toggle">
+						      			<i class="icon" ng-class="isReceiptShown(receipt) ? 'ion-minus' : 'ion-plus'"></i>
+						    		</div>
+						    	</a>
+			         		</ion-item>
+			          		<ion-item class="item-accordion receipt-item " ng-repeat="item in receipt.items" ng-show="isReceiptShown(receipt)">
+			          			{{item.name}} &nbsp;{{item.value}}</ion-item>
+			        	</div>
+      				</ion-list>
+				</ion-content>
+			</ion-nav-view>
+		</ion-tab>
+		<ion-tab title="Αυτό τον μήνα" on-select=showMonthTabData()>
+			<ion-nav-view title="month-tab">
+				<ion-content>
+					<ion-list>
+			        	<div ng-repeat="receipt in receipts_monthly">
+			          		<ion-item class="item-stable" ng-click="toggleReceipt(receipt)" ng-class="{active: isReceiptShown(receipt)}">
+			              		<a class="item item-avatar" href="#">
+						      		<img src="./img/venkman.jpg">
+						      		<div class="pull-left">
+						      			<h2><b>{{receipt.name}}</b></h2>
+						      			<p>{{receipt.synolo}} €<p>
+						      		</div>
+						      		<div class="pull-right receipt-toggle">
+						      			<i class="icon" ng-class="isReceiptShown(receipt) ? 'ion-minus' : 'ion-plus'"></i>
+						    		</div>
+						    	</a>
+			         		</ion-item>
+			          		<ion-item class="item-accordion receipt-item "  ng-repeat="item in receipt.items" ng-show="isReceiptShown(receipt)"  >
+			          			{{item.name}} &nbsp;{{item.value}} </ion-item>
+			        	</div>
+      				</ion-list>
+				</ion-content>
+			</ion-nav-view>
+		</ion-tab>
+	</ion-tabs>
+</ion-view>
